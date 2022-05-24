@@ -4,13 +4,13 @@ public class Human {
 
     String firstName;
     String secondName;
-    String fatherName;
+    String fathersName;
     int age;
 
-    public Human(String firstName, String secondName, String fatherName, int age) {
+    public Human(String firstName, String secondName, String fathersName, int age) {
         this.firstName = firstName;
         this.secondName = secondName;
-        this.fatherName = fatherName;
+        this.fathersName = fathersName;
         this.age = age;
     }
 
@@ -22,8 +22,8 @@ public class Human {
         return secondName;
     }
 
-    public String getFatherName() {
-        return fatherName;
+    public String getFathersName() {
+        return fathersName;
     }
 
     public int getAge() {
@@ -39,7 +39,7 @@ public class Human {
     }
 
     public void setFatherName(String fatherName) {
-        this.fatherName = fatherName;
+        this.fathersName = fatherName;
     }
 
     public void setAge(int age) {
@@ -51,11 +51,11 @@ public class Human {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Human human = (Human) o;
-        return Objects.equals(firstName, human.firstName) && Objects.equals(secondName, human.secondName) && Objects.equals(fatherName, human.fatherName) && Objects.equals(age, human.age);
+        return Objects.equals(firstName, human.firstName) && Objects.equals(secondName, human.secondName) && Objects.equals(fathersName, human.fathersName) && Objects.equals(age, human.age);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, secondName, fatherName, age);
+        return Objects.hash(firstName, secondName, fathersName, age);
     }
 }
